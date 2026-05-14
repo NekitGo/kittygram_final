@@ -52,6 +52,7 @@ jobs:
           POSTGRES_PASSWORD: kittygram_password
           DB_HOST: localhost
           DB_PORT: 5432
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
           cd backend
           python manage.py migrate
@@ -63,6 +64,7 @@ jobs:
           POSTGRES_PASSWORD: kittygram_password
           DB_HOST: localhost
           DB_PORT: 5432
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
           cd backend
           python manage.py test
